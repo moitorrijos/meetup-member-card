@@ -1,0 +1,21 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.wp-block-cgb-block-meetup-member-card  {
+  background-color: transparent;
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+
+  & > div {
+    text-align: center;
+  }
+
+}
