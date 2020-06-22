@@ -1,5 +1,7 @@
 Este proyecto es creado utilizando [Create Guten Block](https://github.com/ahmadawais/create-guten-block).
 
+![Meetup Block](images/meetup-block.png)
+
 Abajo verás información de como correr los scripts en tu computadora.
 Debes tener instalado NodeJS y una instalación de WordPress, preferiblemente local.
 
