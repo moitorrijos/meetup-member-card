@@ -23,7 +23,7 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 		},
 		body: {
 			type: 'string',
-			source: 'children',
+			source: 'text',
 			selector: '.card-body',
 		},
 		imageId: {
@@ -71,7 +71,7 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 						>
 							{
 								! imageId ? (
-									'Upload Image'
+									__( 'Upload Image' )
 								) : (
 									<img
 										src={ imageUrl }
@@ -84,7 +84,7 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 				/>
 				<RichText
 					tagName="h3"
-					placeholder="Your Name"
+					placeholder={ __( 'Your Name' ) }
 					multiline={ false }
 					value={ title }
 					className=".card-title"
@@ -92,10 +92,10 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 				/>
 				<RichText
 					tagName="p"
-					multiline={ false }
-					placeholder="Your Bio"
+					placeholder={ __( 'Your Bio' ) }
 					value={ body }
 					onChange={ onChangeBody }
+					className="card-body"
 				/>
 			</div>
 		);
@@ -112,7 +112,7 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 					/>
 				) }
 				<RichText.Content tagName="h3" className="card-title" value={ title } />
-				<RichText.Content tangName="p" className="card-body" value={ body } />
+				<RichText.Content tagName="p" className="card-body" value={ body } />
 			</div>
 		);
 	},
