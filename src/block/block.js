@@ -100,11 +100,19 @@ registerBlockType( 'cgb/block-meetup-member-card', {
 			</div>
 		);
 	},
-
-	save: ( props ) => {
+	save: ( { className, attributes } ) => {
+		const { title, body, imageUrl, imageAlt } = attributes;
 		return (
-			<div className={ props.className }>
-
+			<div className={ className }>
+				{ imageUrl && (
+					<img
+						className="card-image"
+						src={ imageUrl }
+						alt={ imageAlt }
+					/>
+				) }
+				<RichText.Content tagName="h3" className="card-title" value={ title } />
+				<RichText.Content tangName="p" className="card-body" value={ body } />
 			</div>
 		);
 	},
